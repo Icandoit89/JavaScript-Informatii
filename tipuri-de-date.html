@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <title>Tipuri de date</title>
+  </head>
+  <body>
+    <h1>Tipuri de date</h1>
+    <p><i>Deschide consola pentru a vedea executia codului javascript.</i></p>
+    <p>In javascript avem urmatoarele tipuri de date:</p>
+    <ol>
+      <li>Number ( primitiv )</li>
+      <li>*Float ( este tot number )</li>
+      <li>Boolean ( primitiv )</li>
+      <li>Undefined ( primitiv )</li>
+      <li>String ( primitiv )</li>
+      <li>Null ( primitiv )</li>
+      <li>Array ( liste )</li>
+      <li>Object</li>
+    </ol>
+
+    <section>
+      <h3>Indentificarea tipului de date din javascript</h3>
+      <p>
+        Pentru a indetifica un tip de data in javascript folosim operatorul
+        <b>typeof</b>
+      </p>
+    </section>
+
+    <sectiune>
+      <h3>Primitive vs complexe</h3>
+      <p>
+        Tipurile de date primitive, reprezinta tipurile de date simple, care au
+        ca rol reprezentarea unei valori, si categorizarea/ insemnatatea ei.
+      </p>
+      <p>
+        Tipurile de date complexe, reprezinta structuri care pot contine mai
+        multe tipuri de date primitive, dar chiar si tipuri de date complexe in
+        interiorul lor. Nu sunt restrictionate la un anumit numar de informatii.
+      </p>
+    </sectiune>
+    <section id="section-number">
+      <h3>Number</h3>
+      <p>
+        Este un tip de data folosit pentru a reprezenta/recunoaste numerele, cu
+        sau fara virgula, cele cu virugla se mai numesc si float.
+      </p>
+      <p>Number este un tip de data primitiv.</p>
+    </section>
+    <section>
+      <h3>Boolean</h3>
+      <p>Boolean este un tip de data primitiv si el.</p>
+      <p>Reprezinta valori de adevarat sau fals ( true sau false ).</p>
+    </section>
+    <section>
+      <h3>Undefined</h3>
+      <p>Undefined este un tip de data primitiv.</p>
+      <p>
+        <u><b>Undefined</b></u> indica o variabila nedefinita
+      </p>
+    </section>
+    <section>
+      <h3>String</h3>
+      <p>String este un tip de data primitiv.</p>
+      <p>
+        <u><b>String</b></u> ne indica ca avem o valoare text, adica un cuvant
+        sau o propozitie.
+      </p>
+      <p>Se mai poate spune ca stocheaza o serie de caractere.</p>
+    </section>
+    <section>
+      <h3>Null</h3>
+      <p>Null este un tip de data primitiv.</p>
+      <p>
+        <u><b>Null</b></u> este folosit pentru indica ca o anumita variabila nu
+        are valoare, adica are valoarea nimic.
+      </p>
+      <p>Se mai poate spune ca este reprezentarea lui 'nimic' in javascript.</p>
+    </section>
+    <section>
+      <h3>Array ( liste )</h3>
+      <p>
+        <b><u>Array-urile</u></b> sunt considerate tipuri de date complexe,
+        pentru ca pot contine valori cu mai multe tipuri de date in interiorul
+        lor.
+      </p>
+      <p>
+        Sunt folosite pentru a stoca mai multe valori/informatii sub forma de
+        lista.
+      </p>
+      <p>
+        Listele folosesc <b>index</b>, pentru a indica pozitia unui element.
+      </p>
+      <p>
+        Indexul incepe tot timpul de la 0, adica elementul cu numarul 1 din
+        lista, primul element va avea indexul 0.
+      </p>
+      <p>
+        Indexul ne ajuta sa accesam un element din lista noastra, folosind
+        pozitia lui.
+      </p>
+    </section>
+    <section>
+      <h3>Obiectele</h3>
+      <p>
+        Sunt un tip de data complex in javascript, folosit pentru a stoca
+        informatii strans legate intre ele .
+      </p>
+      <p>
+        Exemplul unei masini, care poate avea urmatoarele proprietati: culoare,
+        an de fabricatie, tip carburant, tara de origine ...
+      </p>
+    </section>
+    <script>
+      // tipul de date number
+      console.log(3);
+      console.log(typeof 3); // ii cerem browserului sa ne spuna ce tip este 3
+      // tipul de date float;
+      console.log(3.14);
+      console.log(typeof 3.14);
+      // tipul de date boolean;
+      console.log(true);
+      console.log(typeof true);
+      // tipul de date undefined
+      console.log(undefined);
+      console.log(typeof undefined);
+      // tipul de date string
+      console.log("propozitie");
+      console.log(typeof "propozitie");
+      console.log("3");
+      console.log(typeof "3");
+
+      // tipul de date null
+      console.log(null);
+      console.log(typeof null);
+
+      // tipul de date array / liste
+      console.log([1, 2, 3, 4]);
+      console.log(typeof [1, 2, 3, 4]);
+
+      // tipul de date obiect
+      console.log("### OBIECT ###");
+      var persoana = {
+        nume: "Mihai",
+        varsta: 16,
+        inaltime: 1.73,
+        resedinta: "Timisoara",
+        angajat: true,
+        numereLaLoto: [10, 12, 13, 17],
+        casatorit: null,
+        abilitatiSportive: {
+          fotbal: 10,
+          handbal: 2,
+          box: 7,
+          jogging: 9,
+        },
+      };
+
+      console.log(persoana);
+      console.log("Numele persoane este: ", persoana.nume);
+      console.log("Varsta persoanei este: ", persoana.varsta);
+      console.log("Inaltimea persoanei este: ", persoana.inaltime);
+      console.log("Resedinta persoane este: ", persoana.resedinta);
+      console.log("persoana este angajata? ", persoana.angajat);
+      console.log(
+        "Care sunt numerele de saptamana aceasta de la loto:",
+        persoana.numereLaLoto
+      );
+      console.log(
+        "Pe o scara de la 1 -10 persoana joaca fotbal",
+        persoana.abilitatiSportive.fotbal
+      );
+      console.log("Primul numar la loto este: ", persoana.numereLaLoto[0]);
+    </script>
+  </body>
+</html>

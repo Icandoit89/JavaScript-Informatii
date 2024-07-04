@@ -1,0 +1,126 @@
+<html>
+  <head>
+    <title>Structuri decizionale</title>
+  </head>
+  <body>
+    <h1>Srtucturi decizionale</h1>
+    <p>
+      Structurile decizionale sunt modalitati prin care in javascript putem
+      evalua rezultatul unei compartii/ executii de cod si bazat pe rezultat
+      putem executa o parte de cod sau nu.
+    </p>
+    <section>
+      <h3>Structura If ( daca )</h3>
+      <p>
+        Ne ajuta sa evaluam o propozite logica, care returneaza adevarat/fals (
+        alb/negru, 1/0 ), si sa executam cod bazat pe valoarea ei.
+      </p>
+      <p>
+        Daca valoarea din interiorul parantezei este adevarata, codul din
+        interiorul blocului IF va fi executat.
+      </p>
+      <p>If poate fi folosit singur, fara alt bloc decizional</p>
+    </section>
+    <section>
+      <h3>Structura Else If ( altfe daca )</h3>
+      <p>
+        Ne ajuta sa evaluam o propozitie deja evaluata de un IF, si sa decidem
+        daca codul din interior va fi executat sau nu. Functioneaza la fel ca
+        IF, daca propozitia este adevarata
+      </p>
+      <p>Else if nu poate fi folosit decat dupa un block de IF</p>
+    </section>
+    <section>
+      <h3>Structura Else ( altfel )</h3>
+      <p>
+        Daca propozitia evaluata in IF nu este adevarata, se va executa codul
+        din interiorul blocului else, cel care urmeaza tot timpul dupa IF.
+      </p>
+      <p>
+        Acesta poate urma si dupa mai multe blocuri de else/if cu aceeasi
+        regula, daca nu se va executa codul din una din ele, se va executa codul
+        din else.
+      </p>
+    </section>
+    <section>
+      <h3>Swtich ( schimba )</h3>
+      <p>Switch evalueaza o valoare simpla, compara cu "===".</p>
+      <p>
+        Switch foloseste blocuri numite 'case :', in cazul in care valoarea este
+        aceeasi cu cea specifica dupa cuvnatul case, codul din interiorul
+        blocului case va fi executat
+      </p>
+      <p>
+        Are nevoie de break;, este un cuvant special folosit in switch pentru a
+        intrerupe executia switch-ului in cazul in care cazul a fost intalnit si
+        codul executat.
+      </p>
+      <p>
+        default, este cazul standard, necesar in toate switchurile, practic
+        default este cazul folosit in situatia in care nici unul dintre cazurile
+        definite nu este valid.
+      </p>
+    </section>
+    <script>
+      // daca
+      var porpoziteLogica = false;
+      if (porpoziteLogica) {
+        console.log("Propozitia este adevarata.");
+      } else {
+        // altfel
+        console.log("Propozitai este falsa.");
+      }
+
+      //daca cu mai multe altfel...
+
+      var varsta = 12;
+
+      if (varsta >= 18) {
+        // daca varsta este mai mare de 18
+        console.log("Aveti access pe plaja pentru adulti.");
+      } else if (varsta >= 12 && varsta < 18) {
+        // altfel daca.... varsta este cuprinsa intre 12 si 17
+        console.log("Aveti access pe plaja pentru adolescenti.");
+      } else {
+        console.log("Aveti access pe plaja pentru copii mici.");
+      }
+
+      // switch statement
+      console.log("### SWITCH ###");
+
+      var operatiune = "-";
+
+      switch (operatiune) {
+        case "+":
+          console.log("Ati selectat adunare.");
+          break;
+        case "-":
+          console.log("Ati selectat scadere.");
+          break;
+        case "/":
+          console.log("Ati selectat impartire.");
+          break;
+        default:
+          console.log("Nu ati selectat o operatie valida !");
+      }
+
+      // operator ternar
+      console.log("### OPERATOR TERNAR ###");
+      var operatorTernar = varsta > 5 ? "eligibil" : "nu este eligibil";
+      console.log(operatorTernar);
+
+      console.log("### ASIGNARE CONDITIONATA ###");
+
+      //   var eligibil;
+
+      //   if (varsta > 5) {
+      //     eligibil = "eligibil";
+      //   } else {
+      //     eligibil = "nu este eligibil";
+      //   }
+      var eligibil = varsta < 5 ? "eligibil" : "nu este eligibil";
+
+      console.log(eligibil);
+    </script>
+  </body>
+</html>

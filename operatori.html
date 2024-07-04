@@ -1,0 +1,101 @@
+<html>
+  <head>
+    <title>Operatori</title>
+  </head>
+  <body>
+    <h1>Operatori in javascript</h1>
+    <h4>Operatori de calcul</h4>
+    <ul>
+      <li>
+        Operatorul de adunare: +, poate fi folosit si ca operator de concatenare
+        stringuri
+      </li>
+      <li>Operatorul de scadere: -</li>
+      <li>Operatorul de inmultire: *</li>
+      <li>Operatorul de impartire: /</li>
+      <li>Operatorul modulo, de aflare a restului impartirii: %</li>
+      <li>Operatorul de ridicare la putere: **</li>
+    </ul>
+    <h4>Operatori de comparatie</h4>
+    <ul>
+      <li>Operatorul mai mare: ></li>
+      <li>Operatorul mai mic: <</li>
+      <li>Operatorul egal: ==</li>
+      <li>Operatorul egal restrictionat: ===</li>
+      <li>Operatorul mai mare sau egal: >=</li>
+      <li>Operatorul mai mic sau egal: <=</li>
+      <li>Operatorul diferit de: !=</li>
+      <li>Operatorul diferit de strict: !==</li>
+    </ul>
+    <h4>Operatori logici</h4>
+    <ul>
+      <li>Operatorul si: &&</li>
+      <li>Operatorul sau: ||</li>
+    </ul>
+    <h4>Operatori de asignare</h4>
+    <ul>
+      <li>Operatorul asignare: =</li>
+    </ul>
+    <script>
+      // #### Operatori calcul ####
+      // adunare
+      console.log("### OPERATORI CALCUL ###");
+      var suma = 3 + 4;
+      console.log("3 + 4", suma);
+      console.log("Operator folosit +");
+      // concatenare
+      var concatenare = "Mircea are " + 20 + " ani.";
+      console.log("concatenare", concatenare);
+      console.log("Operator folosit +");
+
+      // scadere
+      var diferenta = 10 - 2;
+      console.log("10 - 2", diferenta);
+      console.log("operator folosit -");
+      // TODO:
+      // mai departe de la operatori de calcul ca si tema
+
+      // OPERATORI COMPARATIE
+      console.log("### OPERATORI COMPARATIE ###");
+      var maiMare = 4 > 3; // ne returneaza adevarat/fals
+
+      console.log("4 > 3", maiMare);
+      console.log("operator folosit >");
+
+      var maiMic = 10 < 5;
+      console.log("10 < 5", maiMic);
+      console.log("operator folosit <");
+
+      // Operatorul egal
+
+      var egal = 3 == "3";
+      console.log("operator egal: ==", egal);
+
+      // Operatorul egal strict
+      var egalStrict = 3 === "3";
+      console.log("operator egal strict: ===", egalStrict);
+
+      // Operatorul diferit de:
+      var diferitDe = 3 != "3";
+      console.log("operator diferit de: !=", diferitDe);
+
+      // Operatorul diferit de strict:
+
+      var diferitDeStrict = 3 !== "3";
+      console.log("operator diferit de strict: !==", diferitDeStrict);
+
+      // TODO:
+      // continuati cu exemple pentru ceilalti operatori
+
+      console.log("### OPERATORI LOGICI ###");
+      //Operatori logici
+      var primaComparatie = 3 > 2;
+      var aDouaComparatie = 40 < 12;
+      var douaComparatii = primaComparatie && aDouaComparatie;
+
+      console.log("prima comparatie", primaComparatie);
+      console.log("a doua comparatie", aDouaComparatie);
+      console.log("operator SI: &&", douaComparatii);
+    </script>
+  </body>
+</html>
